@@ -1,5 +1,6 @@
 import { useState } from "react"
 import quizCompleteLogo from "../assets/quiz-complete.png"
+import QuestionTimer from "./QuestionTimer.jsx";
 import QUESTIONS from '../questions.js';
 
 
@@ -32,8 +33,8 @@ const Quiz = () => {
   return (
     <div id="quiz">
         <div id="question">
+            <QuestionTimer onTimeout={ ()=>handleSelectAnswer(null) } timeout={10000}/>
             <h2>{QUESTIONS[activeQuestionIndex].text}</h2>
-
             <ul id="answers">
                 {shuffledAnswers.map((answer)=>(
                     <li key={answer} className="answer">
