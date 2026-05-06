@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import quizCompleteLogo from "../assets/quiz-complete.png";
+import Summery from "./Summery.jsx";
 import QUESTIONS from "../questions.js";
 import Question from "./Question.jsx";
 
@@ -24,10 +24,7 @@ const Quiz = () => {
 
   if (quizIsComplete) {
     return (
-      <div id="summary">
-        <img src={quizCompleteLogo} alt="logo" />
-        <h2>Quiz is complete</h2>
-      </div>
+      <Summery userAnswer={userAnswer}/>
     );
   }
 

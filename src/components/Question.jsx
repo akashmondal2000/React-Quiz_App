@@ -8,7 +8,7 @@ const Question = ({ index, onSelectAnswer, onSkipAnswer }) => {
     selectedAnswer: "",
     isCorrect: null,
   });
-
+  
   let timer = 10000;
 
   if (answer.selectedAnswer) {
